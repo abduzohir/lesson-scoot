@@ -1,0 +1,68 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 96px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: $white;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    @include media(768){
+      justify-content: center;
+    }
+    & .logo{
+      display: flex;
+      align-items: center;
+      ul{
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        @include media(768){
+          display: none;
+        }
+        li a{
+          @include fonts(15px, 25px, $grey, 700);
+          transition: 0.3s;
+        }
+        li a:hover{
+          @include fonts(15px, 25px, $black, 700);
+        }
+      }
+    }
+    & .logo img{
+      width: 107.817px;
+      height: 28.56px;
+      flex-shrink: 0;
+      margin-right: 58px;
+      @include media(576){
+        width: 75.502px;
+        height: 20px;
+        flex-shrink: 0;
+        margin: 0;
+      }
+    }
+    & .logo .menu{
+      width: 19.692px;
+      height: 16px;
+      flex-shrink: 0;
+      margin: 0;
+      position: absolute;
+      left: 32px;
+      display: none;
+      @include media(768){
+        display: flex;
+      }
+    }
+    .btn{
+      @include media(768){
+        display: none;
+      }
+    }
+  }
+}

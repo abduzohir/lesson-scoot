@@ -4,26 +4,24 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'KumbhSans';
+  font-family: 'SpaceMono';
   font-weight: 400;
   &::before, &::after{
     font-family: 'icons';
   }
 }
 :root{
-  --black: #4A556C;
-  --blue: #333461;
+  --black: #495567;
   --white: #fff;
-  --gray: #FAF8F6;
-  --green: #20AD96;
-  --blue-dark: #041434;
+  --dark: #333A44;
+  --yellow: #FCB72B;
+  --grey: #939CAA;
 }
 $black: var(--black);
-$blue: var(--blue);
 $white: var(--white);
-$gray: var(--gray);
-$green: var(--green);
-$blue-dark: var(--blue-dark);
+$dark: var(--dark);
+$yellow: var(--yellow);
+$grey: var(--grey);
 
 .container{
   min-height: 40px;
@@ -34,13 +32,13 @@ h3{
   @include h3();
 }
 .btn{
-  width: 250px;
-  border-radius: 10px;
-  padding: 9px 0;
+  width: 180px;
+  height: 53px;
   border: none;
   outline: none;
-  background: $green;
-  @include fonts(14px, 24px, $white, 700);
+  text-align: center;
+  background: $yellow;
+  @include fonts(15px, 25px, $white, 700);
   cursor: pointer;
   transition: 0.3s;
   &:hover{

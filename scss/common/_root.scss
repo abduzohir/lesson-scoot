@@ -4,11 +4,11 @@
   }
 }
 @mixin container(){
-  max-width: 1470px;
+  max-width: 1130px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  @include media(1400){max-width: 1140px;}
+  @include media(1400){max-width: 1130px;}
   @include media(1200){max-width: 960px;}
   @include media(992){max-width: 720px;}
   @include media(768){max-width: 540px;}
@@ -21,10 +21,13 @@
     font-weight: $fWeight;
   }
 }
-$KumbhSans: ('Regular', 400),('ExtraBold', 800);
+$LexendDeca: ('Regular', 400),('Regular', 400);
+$SpaceMono: ('Regular', 400),('Bold', 700);
 
-@each $name, $weight in $KumbhSans{
-  @include fontFace('KumbhSans', '../fonts/KumbhSans/KumbhSans', $name, 'ttf', 'truetype', $weight)
+@each $name, $weight in $LexendDeca{
+  @include fontFace('LexendDeca', '../fonts/LexendDeca/LexendDeca', $name, 'ttf', 'truetype', $weight);}
+@each $name, $weight in $SpaceMono{
+  @include fontFace('SpaceMono', '../fonts/SpaceMono/SpaceMono', $name, 'ttf', 'truetype', $weight);
 }
 @mixin fonts($fz: null, $lh: null, $color: null, $fw: null) {
   font-size: $fz;
@@ -33,15 +36,9 @@ $KumbhSans: ('Regular', 400),('ExtraBold', 800);
   font-weight: $fw;
 }
 @mixin h3(){
-  @include fonts(48px, 56px, $black, 800);
-  color: $blue;
+  @include fonts(48px, 48px, $black, 700);
+  letter-spacing: -2.143px;
   @include media(768){
-    @include fonts(36px, 56px, $black, 800);
-  }
-  @include media(576){
-    @include fonts(32px, 46px, $black, 800);
-  }
-  @media (max-width: 370px) {
-    text-align: center;
+    @include fonts(32px, 32px, $black, 700);
   }
 }
