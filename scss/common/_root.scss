@@ -1,0 +1,47 @@
+@mixin media($size) {
+  @media (max-width: #{$size}px) {
+    @content;
+  }
+}
+@mixin container(){
+  max-width: 1470px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include media(1400){max-width: 1140px;}
+  @include media(1200){max-width: 960px;}
+  @include media(992){max-width: 720px;}
+  @include media(768){max-width: 540px;}
+  @include media(576){max-width: 100%;}
+}
+@mixin fontFace($font,$fUrl,$fName,$ext,$format,$fWeight) {
+  @font-face {
+    font-family: $font;
+    src: url('#{$fUrl}-#{$fName}.#{$ext}') format($format);
+    font-weight: $fWeight;
+  }
+}
+$KumbhSans: ('Regular', 400),('ExtraBold', 800);
+
+@each $name, $weight in $KumbhSans{
+  @include fontFace('KumbhSans', '../fonts/KumbhSans/KumbhSans', $name, 'ttf', 'truetype', $weight)
+}
+@mixin fonts($fz: null, $lh: null, $color: null, $fw: null) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+  font-weight: $fw;
+}
+@mixin h3(){
+  @include fonts(48px, 56px, $black, 800);
+  color: $blue;
+  @include media(768){
+    @include fonts(36px, 56px, $black, 800);
+  }
+  @include media(576){
+    @include fonts(32px, 46px, $black, 800);
+  }
+  @media (max-width: 370px) {
+    text-align: center;
+  }
+}
