@@ -1,0 +1,93 @@
+.main{
+  margin-top: 160px;
+  margin-bottom: 200px;
+  @include media(992){
+    margin-bottom: 145px;
+  }
+  @include media(576){
+    margin-bottom: 120px;
+  }
+  &__content{
+    position: relative;
+    &-bg{
+      position: absolute;
+      top: 44px;
+      left: -190px;
+      z-index: -1;
+      width: 974px;
+      height: 15px;
+      background: #E5ECF4;
+      @include media(1200){
+        max-width: 900px;
+      }
+      @include media(992){
+        height: 672px;
+        width: 15px;
+        top: -160px;
+        left: 54px;
+      }
+      @include media(576){
+        display: none;
+      }
+    }
+    svg{
+      transition: 0.3s;
+      min-width: 96px;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    &-list{
+      display: flex;
+      column-gap: 30px;
+      row-gap: 40px;
+      @include media(992){
+        flex-direction: column;
+      }
+      &__card{
+        max-width: 350px;
+        @include media(992){
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 573px;
+          width: 100%;
+          column-gap: 30px;
+        }
+        @include media(576){
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        &-title{
+          display: flex;
+          flex-direction: column;
+          @include media(992){
+            max-width: 398px;
+          }
+          @include media(576){
+            justify-content: center;
+            align-items: center;
+          }
+          p{
+            @include fonts(24px, 28px, $black, 700);
+            letter-spacing: -1.071px;
+            margin-top: 40px;
+            margin-bottom: 27px;
+            @include media(576){
+              text-align: center;
+            }
+          }
+          span{
+            @include fonts(15px, 25px, $grey, 400);
+            font-family: 'LexendDeca';
+            @include media(576){
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

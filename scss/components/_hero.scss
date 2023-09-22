@@ -71,6 +71,8 @@
         @include media(576){
           margin-top: 24px;
           max-width: 311px;
+          margin-left: 0;
+          margin-right: 0;
         }
         .btn{
           // display: none;
