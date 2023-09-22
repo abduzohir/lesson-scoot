@@ -1,6 +1,13 @@
 .cards{
   overflow: hidden;
   position: relative;
+  margin-bottom: 200px;
+  @include media(992){
+    margin-bottom: 145px;
+  }
+  @include media(576){
+    margin-bottom: 120px;
+  }
   &__content{
     padding: 0;
     min-height: 40px;
@@ -69,6 +76,9 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+        }
+        @include media(576){
+          padding: 0 15px;
         }
         h3{
           max-width: 445px;
