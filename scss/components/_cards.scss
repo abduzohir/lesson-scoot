@@ -1,0 +1,137 @@
+.cards{
+  overflow: hidden;
+  position: relative;
+  &__content{
+    padding: 0;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 150px;
+    @media (min-width: 992px) {
+      @include container();
+    }
+    &-card{
+      display: flex;
+      align-items: center;
+      position: relative;
+      @include media(992){
+        flex-direction: column-reverse;
+      }
+      .desktopimg{
+        max-width: 741px;
+        width: 100%;
+        margin-right: -190px;
+        @include media(1200){
+          margin-right: -138px;
+        }
+        @media (max-width: 1120px) {
+          margin-right: -95px;
+        }
+        @media (max-width: 1040px) {
+          margin-right: -55px;
+        }
+      }
+      .desktopimg img{
+        width: 100%;
+        @include media(992){
+          margin: 0;
+          width: 100%;
+          padding-left: 40px;
+        }
+        @include media(576){
+          display: none;
+        }
+      }
+      .desktopimg3 img{
+        padding-left: 130px;  
+        @include media(1200){
+          padding-left: 100px;
+        }
+        @include media(992){
+          padding-left: 110px;
+        }
+      }
+      .phoneimg{
+        display: none;
+        @include media(576){
+          display: flex;
+          width: 100%;
+          padding-left: 40px;
+        }
+      }
+      &__title{
+        @media (min-width: 992px) {
+          min-width: 450px;
+        }
+        @include media(992){
+          max-width: 450px !important;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        h3{
+          max-width: 445px;
+          @include media(992){
+            text-align: center;
+            margin-top: 56px;
+            margin-bottom: 16px;
+          }
+        }
+        p{
+          max-width: 445px;
+          font-family: 'LexendDeca';
+          margin-top: 24px;
+          margin-bottom: 40px;
+          @include fonts(15px, 25px, $grey, 400);
+          @include media(992){
+            text-align: center;
+          }
+        }
+      }
+    }
+    &-card:nth-of-type(2){
+      flex-direction: row-reverse;
+      @include media(992){
+        flex-direction: column-reverse;
+      }
+      .desktopimg2 img{
+        padding-right: 130px;  
+        @include media(1200){
+          padding-right: 100px;
+        }
+        @include media(992){
+          padding-right: 110px;
+        }
+        @include media(768){
+          padding-right: 80px;
+        }
+      }
+      .desktopimg{
+        max-width: 741px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: -190px;
+        @include media(1200){
+          margin-left: -138px;
+        }
+        @media (max-width: 1120px) {
+          margin-left: -95px;
+        }
+        @media (max-width: 1040px) {
+          margin-left: -80px;
+        }
+      }
+      .phoneimg{
+        display: none;
+        @include media(576){
+          display: flex;
+          width: 100%;
+          padding-right: 25px;
+          margin-left: -5px;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
