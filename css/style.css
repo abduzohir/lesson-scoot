@@ -812,7 +812,7 @@ h3 {
 .footer__bottom-content .logo ul li a:hover {
   font-size: 15px;
   line-height: 25px;
-  color: var(--black);
+  color: var(--white);
   font-weight: 700;
 }
 .footer__bottom-content .logo img {
