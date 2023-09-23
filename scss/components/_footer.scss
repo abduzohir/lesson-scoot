@@ -97,7 +97,7 @@
             transition: 0.3s;
           }
           li a:hover{
-            @include fonts(15px, 25px, $black, 700);
+            @include fonts(15px, 25px, $white, 700);
           }
         }
       }
